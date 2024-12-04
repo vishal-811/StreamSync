@@ -31,6 +31,7 @@ const VideoUploadPage : React.FC= () => {
 
   const [videoUrl, setVideoUrl] = useState<string>()
 
+
   const navigate = useNavigate();
 
   const handleDrag = useCallback((e: React.DragEvent, type: 'video' | 'thumbnail', active: boolean) => {

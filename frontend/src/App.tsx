@@ -1,9 +1,10 @@
+import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Upload from "./pages/Upload";
 import LandingPage from './pages/LandingPage'
-import './App.css';
 import StreamSyncSignup from "./pages/Signup";
 import StreamSyncSignIn from "./pages/Signin";
+import VideoPlayer from "./pages/VideoPlayer";
 function App() {
   return (
     <div className="w-screen">
@@ -13,6 +14,7 @@ function App() {
           <Route path="/signup" element={<StreamSyncSignup/>}/>
           <Route path="/signin" element ={<StreamSyncSignIn/>}/>
           <Route path="/upload" element={<Upload />} />
+          <Route path="/videoplayer" element={<VideoPlayer/>}/>
         </Routes>
       </BrowserRouter>
     </div>
