@@ -22,7 +22,7 @@ const VideoUploadPage : React.FC= () => {
   const [dragActive, setDragActive] = useState({
     video: false,
     thumbnail: false,
-  })
+  });
   const [uploadProgress, setUploadProgress] = useState({
     video: 0,
     thumbnail: 0,

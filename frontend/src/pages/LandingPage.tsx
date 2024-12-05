@@ -132,7 +132,7 @@ const StreamSyncHero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-              <button className="w-full sm:w-auto group bg-orange-500 hover:bg-orange-600 text-zinc-950 px-8 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2">
+              <button onClick={()=>navigate('/uservideos')} className="w-full sm:w-auto group bg-orange-500 hover:bg-orange-600 text-zinc-950 px-8 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2">
                 Get Started
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>

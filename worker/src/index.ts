@@ -69,7 +69,7 @@ async function TranscodeVideo(inputStream: Readable, quality: string): Promise<P
 
 async function Start() {
   try {
-    const client = createClient();
+    const client =  createClient();
     await client.connect();
     console.log("Connected to Redis successfully");
     
