@@ -5,6 +5,7 @@ import { VideoCard } from '@/components/videoCard'
 import { RecentUploadCard } from '@/components/recentUpload'
 import { useInView } from 'react-intersection-observer'
 import { useNavigate } from 'react-router-dom'
+import { Navbar } from '@/components/navbar'
 
 interface Video {
   id: string;
@@ -139,31 +140,8 @@ export default function UserVideos() {
           backgroundSize: '128px 128px'
         }}
       />
-
-      {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800/50 shadow-lg shadow-black/20'
-          : 'bg-transparent'
-        }`}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-2 group">
-              <Play className="text-orange-500 w-6 h-6 group-hover:text-orange-400 transition-colors" />
-              <span className="text-lg font-semibold text-zinc-100 tracking-tight group-hover:text-white transition-colors">
-                StreamSync
-              </span>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <button onClick={() => { navigate('/upload') }} className="bg-zinc-800 hover:bg-zinc-700 text-zinc-100 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-zinc-700 hover:border-zinc-600 flex items-center">
-                <Upload className="w-4 h-4 mr-2" />
-                Upload Video
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+     <Navbar/>
+     
       {/* Main content */}
       <main className="relative pt-32 pb-20 px-6 z-10">
         <div className="max-w-7xl mx-auto">
